@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CGPA | Calculator</title>
+    {% load static %}
+<!--    <link rel="stylesheet" href="{% static 'MyAppStatic/css/index.css' %}">-->
+    <link rel="stylesheet" href="{% static 'MyAppStatic/css/cgpa_sixSem.css' %}">
+    <link rel="icon " href="{% static 'MyAppStatic/media/calculator.png' %}">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+    </style>
+</head>
+<body>
+<div class="form_class">
+    <form method="post">
+        {% csrf_token %}
+        <h3>Your CGPA Calculation !</h3>
+        <div class="contents">
+           <h4>You must know the value of GPA, before calculating CGPA </h4>
+            <p>How to calculate GPA ?</p>
+            <img src="{% static 'MyAppStatic/media/gpa.png' %}" height="150px" width="600px">
+        </div>
+        <div class="form_div">
+            <form method="post">
+                {% csrf_token %}
+                <div class="inputs_align">
+                <div>
+                <label for="sem1">SEM 1  </label><input type="text" id="sem1" name="sem1" placeholder="Enter 1st sem GPA ">
+                <label for="sem2">SEM 2  </label><input type="text" id="sem2" name="sem2" placeholder="Enter 2nd sem GPA ">
+                <label for="sem3">SEM 3  </label><input type="text" id="sem3" name="sem3" placeholder="Enter 3rd sem GPA ">
+                </div>
+                <div>
+                <label for="sem4">SEM 4  </label><input type="text" id="sem4" name="sem4" placeholder="Enter 4th sem GPA ">
+                <label for="sem5">SEM 5  </label><input type="text" id="sem5" name="sem5" placeholder="Enter 5th sem GPA ">
+                <label for="sem6">SEM 6  </label><input type="text" id="sem6" name="sem6" placeholder="Enter 6th sem GPA ">
+                </div>
+                </div>
+                <input type="submit" value="CALCULATE">
+            </form>
+            <div>
+                <h5>Did you have eight semesters ?</h5>
+                <div class="anchor">
+                <a href="{% url 'cgpa_cal' %}">Click here !</a>
+                <a href="{% url 'home' %}" id="home">Go to home</a>
+                </div>
+
+            </div>
+            {% if cgpa_value %}
+            <script>
+                alert(`Your CGPA is : {{cgpa_value}}`);
+                window.location.href = 'http://127.0.0.1:8000/cgpa_cal_six/';
+            </script>
+            {% endif %}
+        </div>
+    </form>
+</div>
+</body>
+</html>

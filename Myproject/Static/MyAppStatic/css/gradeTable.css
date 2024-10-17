@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px; /* Base font size */
+}
+
+body {
+  background-image: url('../media/cgpa_background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: "PT Serif", serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: white;
+  padding: 20px;
+}
+
+/* Full content div aligned to the left */
+.full_content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 50px;
+    background-color: rgba(0, 0, 0, 0.7); /* Slight transparency for background */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width:700px;
+}
+
+/* Heading styling */
+.full_content h1 {
+    font-size: 28px;
+    color: white;
+    margin-bottom: 20px;
+    text-align: center;
+    width:670px;
+}
+
+/* Table styles */
+.table_content table {
+    width: 100%;
+    border-collapse: collapse; /* Remove space between cells */
+    margin-bottom: 20px;
+}
+
+.table_content th, .table_content td {
+    padding: 12px 15px;
+    border: 1px solid white;
+    text-align: center;
+    font-size: 16px;
+
+}
+
+.table_content th {
+    background-color: #063d61;
+    color: #8d9396;
+}
+
+
+
+.table_content tr:hover {
+    background-color: #4286b3; /* Hover effect for rows */
+}
+
+.table_content td {
+    color: white;
+}
+
+.table_content td:first-child {
+    font-weight: bold;
+}
+
+/* Anchor tag styled like a button */
+.table_content a {
+    display: inline-block;
+    background-color:  #063d61;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-left:250px;
+    transition: background-color 0.3s ease;
+}
+
+.table_content a:hover {
+    background-color: #4286b3;
+    color:white;
+    font-weight:bold;
+    border:2px solid #4286b3;
+    transition: background-color 0.3s ease;
+}

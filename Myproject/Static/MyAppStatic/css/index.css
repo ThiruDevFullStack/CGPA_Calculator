@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px; /* Base font size */
+}
+
+body {
+  background-image: url('../media/cgpa_background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: "PT Serif", serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: white;
+  padding: 20px;
+}
+
+/* Main container styling */
+.left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 130px;
+    margin-top: 150px;
+    background-color: rgba(0, 0, 0, 0.7); /* Slight transparency for background */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for elevation */
+    max-width: 600px;
+}
+
+/* Navigation bar header styling */
+.nav_bar {
+    margin-bottom: 20px;
+
+    width:560px;
+}
+
+.nav_bar h1 {
+    font-size: 28px;
+    color: white; /* Gold color for header */
+    margin: 10px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add subtle text shadow */
+    text-align:center;
+
+}
+
+.para {
+margin-top:20px;
+/*border:2px solid white;*/
+padding-left:150px;
+}
+
+.para p {
+    font-size: 16px;
+    color:#4286b3;
+    margin-top:10px;
+}
+
+/* Content section styling */
+.contents {
+    margin-top: 10px;
+   /* border:2px solid white;*/
+    width:560px;
+}
+
+.contents h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color:white; /* Bright coral for headings */
+    text-align:center;
+}
+
+.contents p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #4286b3; /* Turquoise color for sub-headings */
+     text-align:center;
+
+}
+
+.contents h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color:white; /* Medium Slate Blue for subheadings */
+     text-align:center;
+}
+
+/* Button-style anchor tags */
+.btn{
+display:flex;
+justify-content: space-between;
+gap:20px;
+}
+.btn a{
+    display: inline-block;
+    background-color: #4286b3;
+    color: white; /* White text */
+    padding: 10px 20px;
+    margin: 5px 0;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+     border:2px solid white;
+    width:200px;
+}
+.contents a{
+    display: inline-block;
+    background-color: #4286b3;
+    color: white; /* White text */
+    padding: 10px 20px;
+    margin: 10px 0;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    border:2px solid white;
+    width:100%;
+}
+
+a:hover{
+    background-color: white;
+    color:#4286b3;
+    font-weight:bold;
+    border:2px solid #4286b3;
+    transition: background-color 0.3s ease;
+}

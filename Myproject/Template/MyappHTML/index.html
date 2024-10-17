@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CGPA | Calculator</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'MyAppStatic/css/index.css' %}">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+    </style>
+</head>
+<body>
+<div class="left">
+<div class="nav_bar">
+    <h1>Welcome to CGPA Calculator</h1>
+    <div class="para">
+    <p>CGPA - Cumulative Grade Point Average</p>
+    <p>GPA - Grade Point Average</p>
+    </div>
+</div>
+<div class="contents">
+    <div>
+        <h2>REQUIRED THINGS</h2>
+        <p>Take your individual semester mark statements</p>
+    </div>
+    <div>
+        <h3>What you want to calculate ?</h3>
+        <div class="btn">
+        <a href="{% url 'cgpa_cal' %}">CGPA</a>
+        <a href="{% url 'cgpa_percentage' %}">CGPA Percentage (%) </a>
+        </div>
+
+        <a href="{% url 'gradeTable' %}">See the Grade Table</a>
+    </div>
+</div>
+</div>
+</body>
+</html>

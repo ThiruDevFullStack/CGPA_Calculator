@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CGPA | Calculator</title>
+    {% load static %}
+<!--    <link rel="stylesheet" href="{% static 'MyAppStatic/css/index.css' %}">-->
+    <link rel="stylesheet" href="{% static 'MyAppStatic/css/cgpa_percentage.css' %}">
+    <link rel="icon " href="{% static 'MyAppStatic/media/percentage.png' %}">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+    </style>
+</head>
+<body>
+<div class="form_div">
+    <form method="post">
+         {% csrf_token %}
+        <h3>Your CGPA Percentage Calculation !</h3>
+        <div class="contents">
+           <h4>You must know the value of CGPA, before calculating CGPA Percentage </h4>
+            <p>How to calculate CGPA ?</p>
+            <img src="{% static 'MyAppStatic/media/cgpa.png' %}" height="150px" width="600px">
+        </div>
+        <div>
+             <label for="percentage">Enter your CGPA  -  </label><input type="text" id="percentage" name="percentage" placeholder="Enter here.. ">
+             <input type="submit" value="Calculate ( % )">
+        </div>
+    </form>
+     <div class="anchor">
+                <h5>Did you want to know your CGPA ?</h5>
+                <a href="{% url 'cgpa_cal' %}">Click here !</a>
+                <a href="{% url 'home' %}" id="home">Go to home</a>
+     </div>
+     {% if cgpa_percentage_value %}
+            <script>
+                alert(`Your CGPA is : {{cgpa_percentage_value}}`);
+                window.location.href = 'http://127.0.0.1:8000/cgpa_percentage';
+            </script>
+    {% endif %}
+</div>
+</body>
+</html>
